@@ -1,5 +1,117 @@
-*{
+:root {
+    --succes-color: #1f04ea;
+    --error-color: #e74c3c;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to right, #6f75f2, #c75ce8);
+}
+
+.container {
+    width: 400px;
+    border-radius: 10px;
+    background: transparent;
+    padding: 30px;
+    box-shadow: 0px 31px 27px rgb(0, 0, 0, 0.7);
+}
+
+.container h1 {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.form-control {
+    width: 100%;
+}
+
+.form-control input {
+    color: black;
+    font-style: normal;
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 2px solid white;
+    position: relative;
+    margin-top: 15px;
+}
+
+.form-control input::placeholder {
+    color: black;
+    font-weight: 200;
+    font-style: italic;
+    font-family: "Poppins";
+}
+
+.form-control span {
+    position: absolute;
+    top: 38px;
+    left: 0;
+    width: 0%;
+    transition: 0.3s;
+}
+
+.form-control input:focus~span {
+    width: 100%;
+}
+
+.form-control.error small {
+    color: var(--error-color);
+}
+
+.form-control.error input {
+    border-bottom: 2px solid var(--error-color);
+}
+
+.btn-submit {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background: var(--succes-color);
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    
+}
+
+.btn-submit:hover {
+    background: white;
+    color: var(--succes-color);
+   font-size: 30px;
+    box-shadow: inset -5px -5px 9px rgba(255, 255, 255, 0.45), inset 5px 5px 9px rgba(94, 104, 121, 0.3);
+}
+
+.signup-link {
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* .signup-link a {
+    background: var(--succes-color);
+    text-decoration: none;
+    cursor: pointer;
+} */
+
+.signup-link a:hover {
+    text-decoration: underline;
 }
